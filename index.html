@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nisarg's Portfolio</title>
+</head>
+<style>
+    *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+body{
+    background-color:#F2EFE7;
+    color:black;
+    font-family: 'Times New Roman', Times, serif;
+    overflow-x: hidden;
+}
+a{
+    color: white;
+    text-decoration: none;
+}
+#about1{
+    margin-bottom: 120px;
+}
+#skills1{
+    margin-bottom: 90px;
+}
+#contact1{
+    margin-bottom: 60px;
+}
+nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 80px;
+    background-color:#034C53;
+    position: fixed;
+    width: 100%;
+    margin: 0px;
+    z-index: 1000;
+}
+nav ul{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+nav ul li{
+    list-style: none;
+    margin: 0 15px;
+}
+nav ul li a{
+    text-decoration: none;
+    color: white;
+}
+nav ul li a:hover{
+    color: burlywood;
+}
+.left{
+    font-size: 1.6rem;
+}
+.right{
+    font-size: 1.1rem;
+}
+
+.name{
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.hero-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: black;
+    padding-top: 300px;
+    padding-bottom: 120px;
+    background-color:#F2EFE7;
+}
+
+.hero-content {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.hero-content h1 {
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    margin: 1rem 0;
+    letter-spacing: 1px;
+}
+h1, h2, h3 {
+    font-weight: inherit;
+}
+.highlight {
+    color:#034C53;
+}
+.hero-content p {
+    font-size: clamp(1.2rem, 2.5vw, 1.5rem);
+    margin-bottom: 2rem;
+    color:black;
+    margin-top: 20px;
+}
+img{
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 0 auto;
+    display: block;
+}
+.about-section{
+    background-color:#034C53;
+    padding: 4rem 1rem;
+}
+
+.about-title{
+    color: #F2EFE7;
+    font-size: 1.6rem;
+    margin: 1.5rem 0 0.5rem;
+}
+
+section {
+    padding: 3rem 1rem;
+}
+.section-header {
+    text-align: center;
+    font-size: clamp(1.8rem, 4vw, 2.5rem);
+    color:#F2EFE7;
+    padding: 1rem;
+    margin: 0 auto 2rem;
+    width: 100%;
+}
+
+.p1{
+    margin-left: 1rem;
+}
+
+.about-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    align-items: center;
+    justify-content: center;
+}
+.about-pic {
+    flex: 1;
+    min-width: 250px;
+    max-width: 300px;
+    padding: 1rem;
+}
+.about-text {
+    flex: 2;
+    min-width: 300px;
+    max-width: 700px;
+    padding: 1rem;
+}
+.about-text p {
+    margin-bottom: 1rem;
+    color:white;
+    font-size: 1.05rem;
+    line-height: 1.6;
+}
+.about-text h3 {
+    font-size: 1.8rem;
+    color: #F2EFE7;
+    margin: 1rem 0;
+}
+#sh2{
+    color: #034C53;
+}
+.skills-section {
+    background-color:#F2EFE7;
+    padding: 4rem 1rem;
+}
+.skills-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.skill-category{
+    margin-bottom: 2rem;
+    padding: 2rem;
+    border-radius: 10px;
+    max-width: 800px;
+    margin: 0 auto 2rem;
+}
+.skill-category h3 {
+    font-size: 1.8rem;
+    color: #034C53;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+.skill-item ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+    color: #F2EFE7;
+}
+.skill-item ul li{
+    list-style: none;
+    font-size: 1.2rem;
+    background-color: #034C53;
+    padding: 0.8rem 1.5rem;
+    border-radius: 20px;
+}
+#sh1{
+    padding-top: 50px;
+}
+.contact-section {
+    background-color:#034C53;
+    padding: 4rem 1rem;
+    margin-top: 90px
+}
+.contact-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.contact-info {
+    max-width: 600px;
+    margin: 0 auto;
+}
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    color: white;
+    font-size: 1.1rem;
+}
+.contact-item p {
+    min-width: 100px;
+    color: #F2EFE7;
+}
+#s1{
+    background-color: #F2EFE7;
+    padding-bottom: 80px;
+}
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        height: auto;
+        padding: 1rem;
+    }
+    .left, .right {
+        margin: 0.5rem 0;
+    }
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+    nav ul li {
+        margin: 0.3rem 0;
+    }
+    .hero-content {
+        padding-top: 6rem;
+    }
+    .about-content {
+        flex-direction: column;
+    }
+    .skill-item ul {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+</style>
+<body>
+    <nav>
+        <div class="left" style="color: white;">Nisarg's Portfolio</div>
+        <div class="right">
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about1">About Me</a></li>
+                <li><a href="#skills1">Skills</a></li>
+                <li><a href="#contact1">Contact Me</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="hero-section" id="home">
+        <div class="hero-content">
+            <span class="name">"Hello, I'm "
+                <span class="highlight">Nisarg</span>
+            </span>
+            <p>Web Developer & Designer</p>
+        </div>
+    </div>
+    <div id="about1"><span></span></div>
+    <div id="about" class="about-section">
+        <h2 class="section-header">About Me</h2>
+        <div class="about-content">
+            <div class="about-pic">
+                <img src="nisarg photo.jpg" alt="Nisarg">
+            </div>
+            <div class="about-text">
+                <h3 class="about-title">Who I am:</h3>
+                <p>
+                    <span class="p1"> Hello! </span>I'm a passionate web developer with a strong foundation in
+                HTML, CSS, and JavaScript. I enjoy creating clean,
+                functional, and visually appealing websites.
+                </p>
+
+                <h3 class="about-title">My Journey:</h3>
+                <p><span class="p1">"I </span>started my journey in web development when I built my first website 
+                for a portfolio. Since then, I've expanded my skill 
+                set and worked on numerous projects ranging from personal blogs to e-commerce platforms."
+                </p>
+            </div>
+        </div>
+    </div>
+<div id="skills1"><span></span></div>
+    <div id="skills" class="skills-section">
+        <h2 class="section-header" id="sh2">My Skills</h2>
+        <div class="skills-container">
+            <div class="skill-category">
+                <h3>Frontend Development</h3>
+                <div class="skill-item">
+                    <ul>
+                        <li>HTML</li>
+                        <li>CSS</li>
+                        <li>JavaScript</li>
+                        <li>React</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="contact1"><span></span></div>
+    <div id="contact" class="contact-section">
+        <h2 class="section-header" id="sh1">Contact Me</h2>
+        <div class="contact-container">
+            <div class="contact-info">
+                <div class="contact-item">
+                    <p>Contact:</p> +91 6351313801
+                </div>
+                <div class="contact-item">
+                    <p>Email:</p>24ituoz103@ddu.ac.in
+                </div>
+                <div class="contact-item">
+                    <p>LinkedIn:</p><a href="https://www.linkedin.com/in/nisarg-patel-68ab08326">Nisarg Patel</a>
+                </div>
+                <div class="contact-item">
+                    <p>GitHub:</p><a href="https://github.com/nisarg1604">Nisarg_p1604</a>
+                </div>
+                <div class="contact-item">
+                    <p>CodeChef:</p><a href="https://www.codechef.com/users/nis_2006">Nisarg_2006</a>
+                </div>
+                <div class="contact-item">
+                    <p>Location:</p> Vadodara
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="s1"></div>
+</body>
+</html>
